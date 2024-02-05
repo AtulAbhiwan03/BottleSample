@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WallMovement : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 10f;
     public Transform leftWall;
     public Transform rightWall;
 
@@ -49,7 +49,7 @@ public class WallMovement : MonoBehaviour
 
     #endregion
 
-
+    #region Editor Working
 
 
     void Start()
@@ -82,4 +82,6 @@ public class WallMovement : MonoBehaviour
         leftWall.position = new Vector2(leftWallX, leftWall.position.y);
         rightWall.position = new Vector2(rightWallX, rightWall.position.y);
     }
+    #endregion
+
 }
