@@ -6,6 +6,7 @@ public class Bounce : MonoBehaviour
 {
     public float bounceForce = 5.0f;
 
+   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("LeftWall") || collision.collider.CompareTag("RightWall"))
