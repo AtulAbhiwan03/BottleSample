@@ -6,6 +6,8 @@ TagManager:
   tags:
   - LeftWall
   - RightWall
+  - Ground
+  - Cap
   layers:
   - Default
   - TransparentFX

@@ -8,12 +8,13 @@ public class CircleObjectIntraction : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Rigidbody2D rb = collision.collider.GetComponent<Rigidbody2D>();
+        /*Rigidbody2D rb = collision.collider.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             Vector2 randomDirection = Random.insideUnitCircle.normalized;
             rb.AddForce(randomDirection * moveSpeed, ForceMode2D.Impulse);
-        }
+        }*/  // Random movement
+        
     }
 
     void Update()

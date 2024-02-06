@@ -11,5 +11,12 @@ public class CollisionDetetct : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
         }
+
+
+        if (other.collider.gameObject.CompareTag("Ground"))
+        {
+            var o = gameObject;
+            o.tag = "Ground";
+        }
     }
 }
