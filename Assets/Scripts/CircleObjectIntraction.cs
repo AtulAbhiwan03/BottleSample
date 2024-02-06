@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CircleObjectIntraction_Test : MonoBehaviour
+public class CircleObjectIntraction : MonoBehaviour
 {
     public float moveSpeed = 5f; 
 
