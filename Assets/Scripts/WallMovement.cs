@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class WallMovement : MonoBehaviour
 {
-    public float speed = 10f;
     public Transform leftWall;
     public Transform rightWall;
 
@@ -49,7 +48,7 @@ public class WallMovement : MonoBehaviour
 
     #endregion
 
-    #region Editor Working
+  
 
 
     void Start()
@@ -60,28 +59,33 @@ public class WallMovement : MonoBehaviour
         rightWall.position = new Vector2(screenWidth / 2f, rightWall.position.y);
     }
 
-    void Update()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float distance = Vector3.Distance(leftWall.position, rightWall.position);
-        if (distance > 5)
-        {
-            leftWall.Translate(Vector2.right * horizontalInput * speed * Time.deltaTime);
-            rightWall.Translate(Vector2.right * -horizontalInput * speed * Time.deltaTime);
-        }
-        else
-        {
-            leftWall.Translate(Vector2.left * speed * Time.deltaTime);
-            rightWall.Translate(Vector2.right * speed * Time.deltaTime);
-        }
+    #region Wall Movement
 
-        float screenWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
-        float leftWallX = Mathf.Clamp(leftWall.position.x, -screenWidth / 2f, screenWidth / 2f);
-        float rightWallX = Mathf.Clamp(rightWall.position.x, -screenWidth / 2f, screenWidth / 2f);
+    /*void Update()
+  {
+      float horizontalInput = Input.GetAxis("Horizontal");
+      float distance = Vector3.Distance(leftWall.position, rightWall.position);
+      if (distance > 5)
+      {
+          leftWall.Translate(Vector2.right * horizontalInput * speed * Time.deltaTime);
+          rightWall.Translate(Vector2.right * -horizontalInput * speed * Time.deltaTime);
+      }
+      else
+      {
+          leftWall.Translate(Vector2.left * speed * Time.deltaTime);
+          rightWall.Translate(Vector2.right * speed * Time.deltaTime);
+      }
 
-        leftWall.position = new Vector2(leftWallX, leftWall.position.y);
-        rightWall.position = new Vector2(rightWallX, rightWall.position.y);
-    }
+      float screenWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
+      float leftWallX = Mathf.Clamp(leftWall.position.x, -screenWidth / 2f, screenWidth / 2f);
+      float rightWallX = Mathf.Clamp(rightWall.position.x, -screenWidth / 2f, screenWidth / 2f);
+
+      leftWall.position = new Vector2(leftWallX, leftWall.position.y);
+      rightWall.position = new Vector2(rightWallX, rightWall.position.y);
+  }
+  */
+
     #endregion
+  
 
 }
