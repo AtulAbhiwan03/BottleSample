@@ -1,10 +1,19 @@
 using UnityEngine;
 
-public class WallMovement : MonoBehaviour
+public class BoundryManager : MonoBehaviour
 {
     public Transform leftWall;
     public Transform rightWall;
+    
+    void Start()
+    {
+        float screenWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
 
+        leftWall.position = new Vector2(-screenWidth / 2f, leftWall.position.y);
+        rightWall.position = new Vector2(screenWidth / 2f, rightWall.position.y);
+    }
+    
+    
 
     #region Old code for wall movement and setting screen bounds Working well
 
@@ -47,19 +56,9 @@ public class WallMovement : MonoBehaviour
     }*/
 
     #endregion
-
-  
-
-
-    void Start()
-    {
-        float screenWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
-
-        leftWall.position = new Vector2(-screenWidth / 2f, leftWall.position.y);
-        rightWall.position = new Vector2(screenWidth / 2f, rightWall.position.y);
-    }
-
-    #region Wall Movement
+    
+    
+    #region Wall Movement Old Code
 
     /*void Update()
   {
@@ -85,7 +84,7 @@ public class WallMovement : MonoBehaviour
   }
   */
 
-    #endregion
+    #endregion 
   
 
 }
