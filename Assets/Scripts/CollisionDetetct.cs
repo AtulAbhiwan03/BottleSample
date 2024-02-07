@@ -7,8 +7,9 @@ public class CollisionDetetct : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (gameObject.GetComponent<Rigidbody2D>().gravityScale == 0)
+        if (gameObject.GetComponent<Rigidbody2D>().gravityScale == 0  && other.gameObject.tag == "Player")
         {
+            Debug.Log("Collided");
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
         }
 
