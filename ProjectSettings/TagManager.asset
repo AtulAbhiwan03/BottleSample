@@ -4,18 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - LeftWall
-  - RightWall
   - Ground
   - Cap
+  - InnerBottle
+  - Bottle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - InnerLayer
   - Water
   - UI
-  - 
+  - Circle
   - 
   - 
   - 
