@@ -8,10 +8,10 @@ public class BoundryManager : MonoBehaviour
     public GameObject prefab;
     void Start()
     {
-        float screenWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
+     /*   float screenWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
 
         leftWall.position = new Vector2(-screenWidth / 2f, leftWall.position.y);
-        rightWall.position = new Vector2(screenWidth / 2f, rightWall.position.y);
+        rightWall.position = new Vector2(screenWidth / 2f, rightWall.position.y);*/
     }
 
     private void Update()

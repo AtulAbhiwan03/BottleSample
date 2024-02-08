@@ -13,4 +13,9 @@ public class InnerColliderDetection : MonoBehaviour
             Debug.Log($"<color=yellow> Bottle Cap collided with {gameObject.tag} </color>");
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        other.gameObject.layer = 0;
+    }
 }
