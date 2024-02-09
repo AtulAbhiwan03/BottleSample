@@ -6,6 +6,7 @@ public class BoundryManager : MonoBehaviour
     public Transform rightWall;
     private bool isInstantiated = false;
     public GameObject prefab;
+    public GameObject instantiatedObject;
     void Start()
     {
      /*   float screenWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
@@ -20,9 +21,16 @@ public class BoundryManager : MonoBehaviour
         {
             Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f)); // The z-coordinate is set to 10f, adjust as needed
             GameObject bb =  Instantiate(prefab);
+            instantiatedObject = bb;
             bb.transform.position = worldMousePosition;
             isInstantiated = true;
 
+        }
+
+        if (Input.GetMouseButtonUp(0) && isInstantiated)
+        {
+            Destroy(instantiatedObject);
+            isInstantiated = false;
         }
     }
 }
