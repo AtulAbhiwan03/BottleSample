@@ -131,7 +131,7 @@ Rigidbody2D:
   m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -159,7 +159,6 @@ GameObject:
   - component: {fileID: 5904734047757025105}
   - component: {fileID: 717509636877597738}
   - component: {fileID: 8556679749543404006}
-  - component: {fileID: 1804387771581209730}
   - component: {fileID: 3763329365025642396}
   m_Layer: 6
   m_Name: Capsule
@@ -261,27 +260,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96, y: 2}
   m_EdgeRadius: 0.03
---- !u!50 &1804387771581209730
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5815556489330308463}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 50
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 0
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &3763329365025642396
 MonoBehaviour:
   m_ObjectHideFlags: 0
