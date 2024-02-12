@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class CollisionDetect : MonoBehaviour
 {
+    public int requiredGroundCount = 330;
+    public static Action ActivateBottel;
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (gameObject.GetComponent<Rigidbody2D>().gravityScale == 0  && other.gameObject.CompareTag("Player"))
@@ -15,11 +18,18 @@ public class CollisionDetect : MonoBehaviour
             gameObject.tag = "Ground";
             other.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
         }
+
+
+        int groundCount = GameObject.FindGameObjectsWithTag("Ground").Length;
+
+        if (groundCount >= requiredGroundCount)
+        {
+           ActivateBottel?.Invoke();
+
+        }
+
     }
 
 
-    private void FixedUpdate()
-    {
-        
-    }
+
 }
