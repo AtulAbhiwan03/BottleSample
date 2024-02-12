@@ -75,7 +75,7 @@ public class BottleFilledEvent : MonoBehaviour
            item.gameObject.tag = "Untagged";
         }
 
-        yield return new WaitForSeconds (5);
+        yield return new WaitForSeconds (2);
         SceneManager.LoadScene(0);
         #endregion
     }

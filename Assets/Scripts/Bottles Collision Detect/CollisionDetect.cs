@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CollisionDetect : MonoBehaviour
 {
-    public int requiredGroundCount = 330;
+    public int requiredGroundCount = 350;
     public static Action ActivateBottel;
     private void OnCollisionEnter2D(Collision2D other)
     {
