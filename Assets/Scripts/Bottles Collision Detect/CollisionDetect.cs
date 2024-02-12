@@ -5,6 +5,8 @@ public class CollisionDetect : MonoBehaviour
 {
     public int requiredGroundCount = 350;
     public static Action ActivateBottel;
+
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (gameObject.GetComponent<Rigidbody2D>().gravityScale == 0  && other.gameObject.CompareTag("Player"))
